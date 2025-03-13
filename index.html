@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <button id="menu-btn" class="menu-btn">☰</button>
+            <ul id="nav-links" class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="projects.html">Projetos</a></li>
+                <li><a href="about.html">Sobre Mim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="text-content">
+            <p class="intro">Olá, eu sou a Naelly 👋</p>
+            <h2><span class="highlight">FullStack</span> Developer</h2>
+            <p class="description">
+                Construo experiências fluidas no front-end e back-ends robustos para transformar ideias em realidade.
+            </p>
+            <div class="buttons">
+                <button id="open-modal-btn" class="btn primary">Contato</button>
+                <a href="projects.html" class="btn secondary">Projetos</a>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="assets/profile.jpg" alt="Naelly Perfil">
+        </div>
+    </main>
+
+    <!-- Modal de Contato -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal-btn" class="close-btn">&times;</span>
+            <h2>Contato</h2>
+            <ul class="contact-list">
+                <li>
+                    <a href="https://www.linkedin.com/in/seu-linkedin" target="_blank">
+                        <img src="icons/linkedin.png" alt="LinkedIn" class="icon linkedin-icon"> LinkedIn
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:seu-email@example.com">
+                        <img src="icons/o-email.png" alt="Email" class="icon email-icon"> seu-email@example.com
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/seu-github" target="_blank">
+                        <img src="icons/github.png" alt="GitHub" class="icon github-icon"> GitHub
+                    </a>
+                </li>
+                <li>
+                    <a href="https://wa.me/seu-numero-whatsapp" target="_blank">
+                        <img src="icons/whatsapp.png" alt="WhatsApp" class="icon whatsapp-icon"> WhatsApp
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
