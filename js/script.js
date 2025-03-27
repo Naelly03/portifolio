@@ -29,3 +29,25 @@ window.addEventListener("click", (event) => {
 });
 });
 
+const toggleButton = document.getElementById("theme-toggle");
+const body = document.body;
+const icon = toggleButton.querySelector(".icon");
+
+function toggleTheme() {
+  body.classList.toggle("dark-theme");
+
+  if (body.classList.contains("dark-theme")) {
+    icon.textContent = "☀️"; 
+    localStorage.setItem("theme", "dark");
+  } else {
+    icon.textContent = "🌙"; 
+    localStorage.setItem("theme", "light");
+  }
+}
+
+if (localStorage.getItem("theme") === "dark") {
+  body.classList.add("dark-theme");
+  icon.textContent = "☀️";
+}
+
+toggleButton.addEventListener("click", toggleTheme);

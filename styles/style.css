@@ -18,8 +18,7 @@ header {
 
 nav {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
 }
 
 .nav-links {
@@ -39,12 +38,16 @@ nav {
 
 .nav-links a:hover,
 .nav-links a.active {
-    color: #6A00F4;
+    color: #222; 
+    text-decoration: underline;
+    text-decoration-thickness: 2px; 
+    text-underline-offset: 4px;
+    transition: color 0.3s ease-in-out, text-decoration-thickness 0.3s ease-in-out;
 }
 
 .menu-btn {
     display: none;
-    font-size: 1.5rem;
+    font-size: 2rem;
     background: none;
     border: none;
     cursor: pointer;
@@ -53,27 +56,62 @@ nav {
 .container {
     display: flex;
     align-items: center;
+    flex-direction: row-reverse; 
     justify-content: space-between;
-    padding: 50px 10%;
-    margin-top: 28px;
+    padding: 40px 10%;
+    margin-top: 15px;
+}
+
+.container-projects{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 10%;
+    margin-top: 15px;
+
 }
 
 .text-content {
     max-width: 500px;
 }
 
+@keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  .typing-effect {
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    border-right: 2px solid black; 
+    width: 0;
+    animation: typing 3s steps(20, end) forwards, blinkCursor 0.8s infinite;
+  }
+  
+  @keyframes blinkCursor {
+    50% {
+      border-color: transparent;
+    }
+  }
+   
 .intro,
 .description {
     font-size: 1.2rem;
 }
 
 h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 700;
 }
 
 .highlight {
-    color: #6A00F4;
+    color: black;
+
 }
 
 .description {
@@ -99,23 +137,23 @@ h2 {
 }
 
 .primary {
-    background: #6A00F4;
+    background: black;
     color: white;
 }
 
 .primary:hover {
-    background: #5800c2;
+    background: gray;
 }
 
 .secondary {
     background: none;
     color: #08090A;
-    border: 2px solid #08090A;
+    border: 2px solid gray;
     margin-left: 10px;
 }
 
 .secondary:hover {
-    background: #08090A;
+    background: gray;
     color: white;
 }
 
@@ -124,7 +162,7 @@ h2 {
     height: 350px;
     border-radius: 50%;
     overflow: hidden;
-    border: 3px solid #6A00F4;
+    border: 3px solid black;
 }
 
 .image-container img {
@@ -138,7 +176,7 @@ h2 {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
     padding: 0 10%;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .project-card {
@@ -248,10 +286,6 @@ h2 {
     filter: invert(50%) sepia(100%) saturate(1000%) hue-rotate(320deg) brightness(90%) contrast(90%);
 }
 
-.github-icon {
-    filter: invert(0%) sepia(0%) saturate(100%) hue-rotate(0deg) brightness(100%) contrast(100%);
-}
-
 .whatsapp-icon {
     filter: invert(61%) sepia(64%) saturate(400%) hue-rotate(90deg) brightness(90%) contrast(90%);
 }
@@ -320,3 +354,28 @@ h2 {
         grid-template-columns: repeat(4, 1fr);
     }
 }
+
+.theme-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .theme-button:hover {
+    transform: scale(1.1);
+  }
+  
+  .dark-theme .theme-button {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  
