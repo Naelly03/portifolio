@@ -1,0 +1,123 @@
+.container-skills {
+    max-width: 1200px;
+    padding: 40px 10%;
+    margin-top: 15px;
+}
+
+.text-content {
+    max-width: 500px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.skills-by-category {
+    margin-top: 2rem;
+}
+
+.category {
+    margin-bottom: 2rem;
+}
+
+.category-title {
+    color: #222823;
+    border-bottom: 2px solid #222823;
+    padding-bottom: 0.5rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.2rem 0.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: #f8fafc;
+}
+
+.skill-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skill-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 0.8rem;
+}
+
+.skill-item p {
+    margin: 0;
+    font-weight: 600;
+    color: #334155;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+/* Efeito de digitação */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 51% }
+}
+
+.typing-effect {
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    border-right: 2px solid black;
+    width: 0;
+    animation: typing 3s steps(15, end) forwards, blinkCursor 0.8s infinite;
+}
+
+@keyframes blinkCursor {
+    50% { border-color: transparent }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container-skills {
+        margin-left: auto;
+        padding: 0 1rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 1rem;
+    }
+
+    .skill-item img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #f8f8f8;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-btn {
+        display: block;
+    }
+}
