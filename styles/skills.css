@@ -109,8 +109,12 @@ h3 {
 
 @media (max-width: 768px) {
     .container-skills {
-        margin-left: auto;
         padding: 0 1rem;
+    }
+
+    .text-content {
+        margin-left: 55px;
+        max-width: 100%;
     }
 
     .skills-grid {
@@ -138,5 +142,18 @@ h3 {
 
     .menu-btn {
         display: block;
+    }
+
+
+    @media (max-width: 480px) {
+        .text-content {
+            margin-left: 26px;
+            max-width: 100%;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 90% }
+        }
     }
 }
