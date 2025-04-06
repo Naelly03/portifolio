@@ -16,7 +16,7 @@
       width: 0;
     }
     to {
-      width: 100%;
+      width: 40%;
     }
  }
  .typing-effect {
@@ -225,6 +225,7 @@
  
    .text-content {
      max-width: 100%;
+
    }
 
    h2 {
@@ -255,11 +256,8 @@
    }
    .typing-effect {
       overflow: hidden;
-      white-space: nowrap;
-      display: flex;
-      flex-direction: column;
+      margin-left: 30px;
       border-right: 2px solid black;
-      width: 0;
       max-width: 100%;
       animation: typing 3s steps(20, end) forwards, blinkCursor 0.8s infinite;
    }
