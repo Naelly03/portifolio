@@ -256,7 +256,6 @@
    }
    .typing-effect {
       overflow: hidden;
-      margin-left: 30px;
       border-right: 2px solid black;
       max-width: 100%;
       animation: typing 3s steps(20, end) forwards, blinkCursor 0.8s infinite;
