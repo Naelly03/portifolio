@@ -19,7 +19,6 @@ h2 {
 }
 
 .description {
-    margin: 20px 0;
     color: #575A5E;
     font-size: 1.2rem;
 }
@@ -87,7 +86,7 @@ h2 {
 
 @keyframes typing {
     from { width: 0 }
-    to { width: 55% }
+    to { width: 60% }
 }
 
 .typing-effect {
