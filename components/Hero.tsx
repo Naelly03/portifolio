@@ -12,9 +12,8 @@ export default function Hero() {
 
       <div className="relative z-10">
         <p className="font-mono text-[0.8rem] tracking-[0.24em] uppercase text-muted mb-[16px]">
-          // olá, eu sou a naelly
-        </p>
-
+  {"// olá, eu sou a naelly"}
+</p>
         <h1 className="text-[clamp(2.2rem,5.2vw,3.6rem)] font-bold leading-[1.05] tracking-[-0.02em] mb-[22px]">
           Desenvolvedora
           <span className="block mt-1">
