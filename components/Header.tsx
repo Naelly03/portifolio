@@ -57,31 +57,31 @@ export default function Header() {
             Naelly Silva
           </a>
 
-          <ul className="hidden sm:flex gap-7 list-none text-base items-center">
-            {navLinks.map(({ href, label }) => (
-              <li key={href}>
-                <a
-                  href={href}
-                  className={`text-ink-2 font-medium py-[6px] transition-colors duration-200 hover:underline hover:decoration-2 hover:underline-offset-[5px] ${
-                    activeSection === href.slice(1)
-                      ? "underline decoration-2 underline-offset-[5px]"
-                      : ""
-                  }`}
-                >
-                  {label}
-                </a>
-              </li>
-            ))}
-            <li>
-              <button
-                onClick={toggleTheme}
-                aria-label="Alternar tema"
-                className="bg-transparent border-2 border-ink text-ink font-mono text-[11px] px-[10px] py-[5px] cursor-pointer whitespace-nowrap transition-colors duration-200 hover:bg-ink hover:text-bg"
-              >
-                {theme === "ink" ? "☀ Claro" : "☽ Escuro"}
-              </button>
-            </li>
-          </ul>
+          <div className="flex items-center gap-5">
+            <ul className="hidden sm:flex gap-7 list-none text-base items-center">
+              {navLinks.map(({ href, label }) => (
+                <li key={href}>
+                  <a
+                    href={href}
+                    className={`text-ink-2 font-medium py-[6px] transition-colors duration-200 hover:underline hover:decoration-2 hover:underline-offset-[5px] ${
+                      activeSection === href.slice(1)
+                        ? "underline decoration-2 underline-offset-[5px]"
+                        : ""
+                    }`}
+                  >
+                    {label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <button
+              onClick={toggleTheme}
+              aria-label="Alternar tema"
+              className="bg-transparent border-2 border-ink text-ink font-mono text-[11px] px-[10px] py-[5px] cursor-pointer whitespace-nowrap transition-colors duration-200 hover:bg-ink hover:text-bg"
+            >
+              {theme === "ink" ? "☀ Claro" : "☽ Escuro"}
+            </button>
+          </div>
         </nav>
       </div>
     </header>
