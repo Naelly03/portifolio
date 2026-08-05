@@ -10,11 +10,11 @@ const projects = [
     github: null,
   },
   {
-    title: "E-commerce Store",
-    description: "Uma loja virtual moderna e responsiva para vendas online.",
-    image: "/images/home-ecommerce.png",
-    tech: ["React", "NestJS", "Stripe"],
-    href: "https://developerecommerce.netlify.app/",
+    title: "DevLinks",
+    description: "Projeto de agrupamento de links de rede sociais.",
+    image: "/images/image.png",
+    tech: ["Next.js", "Supabase"],
+    href: "https://devlinks-mauve-five.vercel.app/",
     github: null,
   },
   {
@@ -23,7 +23,7 @@ const projects = [
     image: "/images/home.png",
     tech: ["NestJS", "Next.js", "Postgres"],
     href: null,
-    github: null,
+    github: "https://github.com/Naelly03/monitoringCO2.git",
   },
 ];
 
@@ -80,19 +80,15 @@ export default function Projects() {
                     >
                       Ver projeto →
                     </a>
-                  ) : (
-                    <span className="font-semibold text-[0.92rem] text-muted cursor-default">
-                      Em desenvolvimento
-                    </span>
-                  )}
+                  ) : null}
                   {github && (
                     <a
                       href={github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-mono text-[11px] border border-ink px-2 py-1 text-ink-2 hover:bg-ink hover:text-bg transition-colors duration-150"
+                      className="inline-flex items-center gap-1 font-semibold text-[0.92rem] underline decoration-2 underline-offset-4"
                     >
-                      GitHub ↗
+                      GitHub →
                     </a>
                   )}
                 </div>
