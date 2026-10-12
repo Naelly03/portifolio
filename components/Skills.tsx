@@ -14,7 +14,6 @@ const categories = [
     title: "Backend",
     skills: [
       { icon: "/icons/nodejs-original.svg", name: "Node.js" },
-      { icon: "/icons/adonisjs-original.svg", name: "AdonisJS" },
       { icon: "/icons/nestjs-original.svg", name: "NestJS" },
     ],
   },

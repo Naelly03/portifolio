@@ -1,15 +1,8 @@
 import TypewriterText from "./TypewriterText";
-import CodeGlyph from "./CodeGlyph";
 
 export default function Hero() {
   return (
     <section className="relative overflow-hidden max-w-[1180px] mx-auto px-[10%] max-[900px]:px-7 py-[80px] max-[900px]:py-[50px] grid grid-cols-[1.3fr_0.9fr] max-[900px]:grid-cols-1 gap-[60px] max-[900px]:gap-10 items-center">
-      {/* Marca-d'água </> — assinatura do banner do LinkedIn */}
-      <CodeGlyph
-        strokeWidth={7}
-        className="pointer-events-none select-none absolute -right-8 top-1/2 -translate-y-1/2 w-[clamp(240px,34vw,440px)] h-auto text-ink opacity-[0.05] max-[900px]:hidden"
-      />
-
       <div className="relative z-10">
         <p className="font-mono text-[0.8rem] tracking-[0.24em] uppercase text-muted mb-[16px]">
   {"// olá, eu sou a naelly"}
