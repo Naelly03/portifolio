@@ -54,7 +54,7 @@ export default function Contact() {
             </span>
           </div>
           <div className="flex flex-col gap-[6px] font-mono text-[12px] text-muted">
-            <span>📍 Teresina, BR — UTC-3</span>
+            <span>📍 Timon, MA — UTC-3</span>
             <span>⚡ Resposta em até 24h</span>
           </div>
         </div>

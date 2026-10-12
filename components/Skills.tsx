@@ -15,6 +15,14 @@ const categories = [
     skills: [
       { icon: "/icons/nodejs-original.svg", name: "Node.js" },
       { icon: "/icons/nestjs-original.svg", name: "NestJS" },
+      { icon: "/icons/fastify-original.svg", name: "Fastify" },
+    ],
+  },
+  {
+    title: "Mobile",
+    skills: [
+      { icon: "/icons/react-original.svg", name: "React Native" },
+      { icon: "/icons/expo-original.svg", name: "Expo" },
     ],
   },
   {

@@ -1,7 +1,7 @@
 const facts = [
   { label: "Função", value: "Full-Stack & Mobile" },
-  { label: "Base", value: "Teresina, BR" },
-  { label: "Trabalho", value: "Remoto / Híbrido" },
+  { label: "Base", value: "Timon, MA" },
+  { label: "Trabalho", value: "Remoto / Presencial" },
   { label: "Idiomas", value: "PT · EN" },
   { label: "Status", value: "Disponível" },
 ];
