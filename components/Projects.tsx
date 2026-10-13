@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ProjectGallery from "./ProjectGallery";
 
 const projects = [
   {
@@ -12,10 +13,27 @@ const projects = [
   {
     title: "DevLinks",
     description: "Projeto de agrupamento de links de rede sociais.",
-    image: "/images/image.png",
+    image: "/images/projects/devlinks/01-pagina-publica.png",
     tech: ["Next.js", "Supabase"],
     href: "https://devlinks-mauve-five.vercel.app/",
     github: null,
+    gallery: [
+      {
+        src: "/images/projects/devlinks/01-pagina-publica.png",
+        alt: "Página pública do DevLinks com os links e foto de perfil",
+        caption: "Página pública com os links",
+      },
+      {
+        src: "/images/projects/devlinks/02-painel-admin.png",
+        alt: "Painel admin do DevLinks com lista de links e preview ao vivo",
+        caption: "Painel admin com preview ao vivo e reordenação por arrastar",
+      },
+      {
+        src: "/images/projects/devlinks/03-login-admin.png",
+        alt: "Tela de login do painel admin do DevLinks",
+        caption: "Login de acesso restrito ao painel",
+      },
+    ],
   },
   {
     title: "CO2 Monitoring",
@@ -104,21 +122,25 @@ export default function Projects() {
         </article>
 
         <div className="grid grid-cols-3 max-[900px]:grid-cols-1 max-[600px]:grid-cols-1 gap-6">
-          {projects.map(({ title, description, image, tech, href, github }) => (
+          {projects.map(({ title, description, image, tech, href, github, gallery }) => (
             <article
               key={title}
               className="bg-surface border-2 border-ink shadow-brutal flex flex-col overflow-hidden transition-all duration-200 hover:-translate-x-[3px] hover:-translate-y-[3px] hover:shadow-[7px_7px_0_var(--ink)]"
             >
-              <div className="aspect-[4/3] border-b-2 border-ink overflow-hidden bg-bg">
-                <Image
-                  src={image}
-                  alt={title}
-                  width={600}
-                  height={450}
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-[1.04]"
-                  loading="lazy"
-                />
-              </div>
+              {gallery ? (
+                <ProjectGallery title={title} cover={image} images={gallery} />
+              ) : (
+                <div className="aspect-[4/3] border-b-2 border-ink overflow-hidden bg-bg">
+                  <Image
+                    src={image}
+                    alt={title}
+                    width={600}
+                    height={450}
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-[1.04]"
+                    loading="lazy"
+                  />
+                </div>
+              )}
 
               <div className="p-[20px_22px_22px] flex flex-col gap-[10px] flex-1">
                 <h3 className="text-[1.2rem] font-bold leading-tight">{title}</h3>
