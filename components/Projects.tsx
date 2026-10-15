@@ -9,6 +9,23 @@ const projects = [
     tech: ["Next.js", "Tailwind", "TypeScript"],
     href: "https://event-manager-front-kappa.vercel.app/",
     github: null,
+    gallery: [
+      {
+        src: "/images/projects/easyevent/01-login.png",
+        alt: "Tela de login do EasyEvent com acesso de demonstração",
+        caption: "Login com conta de demonstração",
+      },
+      {
+        src: "/images/projects/easyevent/02-criar-evento.png",
+        alt: "Formulário de criação de evento do EasyEvent com mapa de localização",
+        caption: "Criação de evento com mapa e participantes",
+      },
+      {
+        src: "/images/projects/easyevent/03-convites.png",
+        alt: "Lista de convites recebidos no EasyEvent com botões de aceitar e recusar",
+        caption: "Convites recebidos para aceitar ou recusar",
+      },
+    ],
   },
   {
     title: "DevLinks",
@@ -129,19 +146,7 @@ export default function Projects() {
             </div>
           </div>
 
-          <div className="grid grid-cols-3 gap-2 items-center self-center max-[900px]:max-w-[360px]">
-            {featured.screens.map(({ src, alt }) => (
-              <Image
-                key={src}
-                src={src}
-                alt={alt}
-                width={230}
-                height={498}
-                className="w-full h-auto border-2 border-ink bg-bg"
-                loading="lazy"
-              />
-            ))}
-          </div>
+          <ProjectGallery title={featured.title} images={featured.screens} portrait />
         </article>
 
         <div className="grid grid-cols-3 max-[900px]:grid-cols-1 max-[600px]:grid-cols-1 gap-6">
