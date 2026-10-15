@@ -38,10 +38,27 @@ const projects = [
   {
     title: "CO2 Monitoring",
     description: "Sistema fullstack de monitoramento de CO₂.",
-    image: "/images/home.png",
+    image: "/images/projects/co2-monitoring/01-dashboard.png",
     tech: ["NestJS", "Next.js", "Postgres"],
     href: null,
     github: "https://github.com/Naelly03/monitoringCO2.git",
+    gallery: [
+      {
+        src: "/images/projects/co2-monitoring/01-dashboard.png",
+        alt: "Dashboard do CO2 Monitoring com nível atual de CO₂ e gráfico da média semanal",
+        caption: "Dashboard com nível atual de CO₂ e média semanal",
+      },
+      {
+        src: "/images/projects/co2-monitoring/02-historico.png",
+        alt: "Histórico de medições do CO2 Monitoring agrupado por dia e local",
+        caption: "Histórico de medições agrupado por dia e local",
+      },
+      {
+        src: "/images/projects/co2-monitoring/03-relatorio-pdf.png",
+        alt: "Relatório em PDF com as medições de CO₂ da Sala 101",
+        caption: "Relatório em PDF das medições por local",
+      },
+    ],
   },
 ];
 
@@ -49,7 +66,7 @@ const featured = {
   title: "Dungeons & Fitness",
   description:
     "Transforme exercícios reais em uma aventura de RPG! Cada atividade que você registra vira experiência (XP) pro seu herói, que sobe de nível, evolui e desbloqueia conquistas conforme você se exercita de verdade.",
-  detail: "App mobile com Expo e React Native, API em Node.js + Fastify, publicado na App Store.",
+  detail: "App mobile com Expo e React Native, API em Node.js + Fastify, publicado na App Store e na Google Play.",
   screens: [
     { src: "/images/dnf-home.png", alt: "Tela inicial do Dungeons & Fitness com o herói e XP" },
     { src: "/images/dnf-missoes.png", alt: "Tela de missões diárias do Dungeons & Fitness" },
@@ -57,6 +74,7 @@ const featured = {
   ],
   tech: ["Expo", "React Native", "Node.js", "Fastify"],
   appStore: "https://apps.apple.com/us/app/dungeons-fitness/id6809237695",
+  playStore: "https://play.google.com/store/apps/details?id=dev.dungeons.fitness",
 };
 
 export default function Projects() {
@@ -100,9 +118,14 @@ export default function Projects() {
               >
                 App Store →
               </a>
-              <span className="font-mono text-[11px] text-muted px-2 py-[3px] border border-dashed border-ink">
-                Google Play · em revisão
-              </span>
+              <a
+                href={featured.playStore}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 font-semibold text-[0.92rem] underline decoration-2 underline-offset-4"
+              >
+                Google Play →
+              </a>
             </div>
           </div>
 
